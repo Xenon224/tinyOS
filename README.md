@@ -1,5 +1,6 @@
-##tiny os - bootloader to kernerl shell
+# Tiny os - bootloader to kernerl shell
 
+## Overview
 this is a small project implementing a unix-like operating system from scratch tarting at the BIOS boot sector and progressing toward a
 modular kernel with a basic shell.
 
@@ -7,7 +8,7 @@ goals of this project are to learn os interals and assembly code
 
 ---
 
-##current features
+## Current features
 Custom **16-bit real-mode bootloader**
 kernel loading using BIOS `int 13h`
 Kernel execution at `0x1000`
@@ -22,7 +23,7 @@ Modular structure preparing for C integration
 
 ---
 
-##Architecture overview
+## Architecture overview
 **Bootloader (0x7C00)**
     Initializes segments and stack
     Loads kernel (multiple sectors)
@@ -36,7 +37,7 @@ Modular structure preparing for C integration
   
 ---
 
-##progress log 
+## Progress log 
 Bootloader implemented
 Kernel loaded into memory
 Shell added with cls and echo
