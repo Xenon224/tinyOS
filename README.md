@@ -9,36 +9,36 @@ goals of this project are to learn os interals and assembly code
 ---
 
 ## Current features
-Custom **16-bit real-mode bootloader**
-kernel loading using BIOS `int 13h`
-Kernel execution at `0x1000`
-Text output using BIOS `int 10h`
-Keyboard input using BIOS `int 16h`
-Simple interactive shell with:
-`cls` — clear screen
-`echo <text>` — echo user input
-Command parsing and input buffer
-Backspace and Enter handling
-Modular structure preparing for C integration
+- Custom **16-bit real-mode bootloader**
+- kernel loading using BIOS `int 13h`
+- Kernel execution at `0x1000`
+- Text output using BIOS `int 10h`
+- Keyboard input using BIOS `int 16h`
+- Simple interactive shell with:
+ - `cls` — clear screen
+ - `echo <text>` — echo user input
+- Command parsing and input buffer
+- Backspace and Enter handling
+-  Modular structure preparing for C integration
 
 ---
 
 ## Architecture overview
 **Bootloader (0x7C00)**
-    Initializes segments and stack
-    Loads kernel (multiple sectors)
-    Jumps to kernel entry point
+    1. Initializes segments and stack
+    2. Loads kernel (multiple sectors)
+    3. Jumps to kernel entry point
 
 **Kernel (0x1000)**
-  Initializes its own stack
-  Clears screen and prints welcome message
-  Runs interactive shell loop
-  Handles commands and input
+  1. Initializes its own stack
+  2. Clears screen and prints welcome message
+  3. Runs interactive shell loop
+  4. Handles commands and input
   
 ---
 
 ## Progress log 
-Bootloader implemented
-Kernel loaded into memory
-Shell added with cls and echo
-Multi-sector kernel loading enabled
+- Bootloader implemented
+- Kernel loaded into memory
+- Shell added with cls and echo
+- Multi-sector kernel loading enabled
